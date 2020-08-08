@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords"/>
+    <meta name="author"/>
+    <title>我的收藏</title>
+    <link href="asserts1/Style/index_css.css" type="text/css" rel="stylesheet"/>
+    <link href="asserts/css/bootstrap.min.css" th:href="@{/webjars/bootstrap/4.0.0/css/bootstrap.css}" rel="stylesheet">
+    <script type="text/javascript" src="/asserts1/Style/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="/asserts1/Style/jquery.indexSlidePattern.js"></script>
+
+</head>
+
+<body>
+<div id="All">
+    <div class="head">
+        <div class="logo">
+            <span><form th:action="@{/solrSearch}" action="#" method="get" class="list">
+                <input name="searchName" placeholder=" 搜索音乐" type="text" class="seektext"
+                   style="background-image: url(/asserts1/Images/btn.png); background-repeat: no-repeat; text-indent: 2em;"
+                   />
+                <input th:action="@{/search}" type="submit" class="btn" value="搜索一下"/></form>
+            </span>
+        </div>
+    </div>
+    <div id="navigate">
+        <ul>
+            <li style="font-size:24px; float:left; line-height:35px; text-indent:1em;"><a href="#" th:href="@{/home}" target="_self">首页</a>
+            <li style="font-size:24px; float:left; line-height:35px; text-indent:2em;"><a href="singer.html" th:href="@{/singer}" target="_self">热门歌手</a>
+            <li style="font-size:24px; float:left; line-height:35px; text-indent:2em;"><a href="#" th:href="@{/song/}+'firstPage'">精选歌曲</a>
+            <li style="font-size:24px; float:left; line-height:35px; text-indent:2em;"><a href="#">我的收藏</a>
+            <li style="font-size:24px; float:left; line-height:35px; text-indent:2em;"><a href="#" th:href="@{/recommend}">猜你喜欢</a>
+            <li style="font-size:24px; float:left; line-height:35px; text-indent:2em;"><a th:href="@{/logout}" target="_self">退出登录</a>
+        </ul>
+        <hr/>
+    </div>
+
+    <!--收藏列表-->
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>歌曲</th>
+            <th>歌手</th>
+            <th>收藏时间</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="collection:${collections}">
+            <td width="25%" th:text="${collection.songName}"></td>
+            <td width="25%" th:text="${collection.singer}"></td>
+            <td width="25%" th:text="${collection.createTime}"></td>
+            <td>
+                <a style="color: white" class="btn btn-sm btn-danger" th:text="取消收藏"
+                   th:href="@{/deleteCollection/}+ ${collection.songName}+'&'+${collection.singer}"></a>
+            </td>
+
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

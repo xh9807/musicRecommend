@@ -1,0 +1,297 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    font-family: "方正兰亭超细黑简体", "新宋体", "微软雅黑" Arial, Helvetica, sans-serif;
+}
+
+#All {
+    height: 1900px;
+    width: 1300px;
+    margin: 40px auto;
+}
+
+.head {
+    height: 135px;
+    width: 1300px;
+}
+
+.logo {
+    height: 135px;
+    width: 1300px;
+    /*background-image: url(../Images/logo.png);*/
+    background-repeat: no-repeat;
+    margin-left: 20px;
+}
+
+#navigate {
+    height: 50px;
+    width: 1290px;
+    padding-top: 10px;
+    margin-top: 20px;
+    line-height: 2px;
+}
+
+.list {
+    height: 50px;
+    width: 400px;
+    margin-left: 720px;
+    padding-top: 100px;
+}
+
+.seektext {
+    width: 280px;
+    font-size: 16px;
+    color: #999;
+}
+
+.btn {
+    width: 90px;
+    height: 40px;
+    border: solid;
+    border-color: #FFF;
+    background-color: #CCC;
+}
+
+.main {
+    width: 1290px;
+    height: 1030px;
+    margin-top: 15px;
+    background-image: url(../Images/bg.png);
+    background-repeat: repeat;
+}
+
+.left {
+    width: 815px;
+    height: 1000px;
+    margin-top: 15px;
+    margin-left: 15px;
+    float: left;
+    background-color: #FFF;
+}
+
+.right {
+    width: 428px;
+    height: 1000px;
+    float: right;
+    margin-top: 15px;
+    margin-right: 15px;
+    background-color: #FFF;
+}
+
+hr {
+    display: block;
+    background-color: #F00;
+    width: 1300px;
+    height: 4px;
+    float: left;
+}
+
+a:link, a:visited {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #C00;
+}
+
+.song {
+    width: 140px;
+    height: 200px;
+    margin: 40px 20px 30px 84px;
+    border: solid;
+    border-width: 1px;
+    border-color: #CCC;
+    float: left;
+}
+
+.bottomright {
+    width: 600px;
+    height: 100px;
+    background-image: url(../Images/bottom.png);
+    background-repeat: no-repeat;
+    margin-right: 10px;
+    float: right;
+}
+
+.bottomleft {
+    width: 690px;
+    height: 100px;
+    float: left;
+}
+
+.bottom {
+    width: 1286px;
+    height: 106px;
+    /*background-image: url(../Images/bottom.png);*/
+    background-repeat: no-repeat;
+
+}
+
+.mainlist {
+    width: 260px;
+    height: 38px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: #C00;
+    margin-top: 30px;
+    margin-left: 28px;
+}
+
+.leftmore {
+    width: 815px;
+    height: 20px;
+    margin: 25px 0px 0px 30px;
+}
+
+.sign {
+    width: 430px;
+    height: 230px;
+    border-bottom-width: 10px;
+    border-bottom-style: solid;
+    border-bottom-color: #EAEAEA;
+}
+
+.signin {
+    width: 300px;
+    height: 180px;
+    margin-top: 40px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    padding-top: 10px;
+}
+
+input {
+    width: 200px;
+    height: 30px;
+    line-height: 20px;
+    margin-left: 5px;
+}
+
+from {
+    width: 230px;
+    height: 220px;
+}
+
+.signbtn {
+    margin-left: 50px;
+    width: 120px;
+}
+
+h4 {
+    font-size: 32px;
+    color: #F00;
+    padding: 40px 20px;
+}
+
+.mp3 {
+    margin-left: 6px;
+    width: 423px;
+    height: 524px;
+}
+
+a, img {
+    border: 0;
+}
+
+body {
+    font: 12px/180%
+}
+
+/* demo */
+/*五张图片在缩略图时所显示的位置调整*/
+#demo li:nth-of-type(1) img {
+    transform: translate(-10px);
+}
+
+#demo li:nth-of-type(2) img {
+    transform: translate(-370px);
+}
+
+#demo li:nth-of-type(3) img {
+    transform: translate(-780px);
+}
+
+#demo li:nth-of-type(4) img {
+    transform: translate(-886px);
+}
+
+#demo {
+    width: 1300px;
+    height: 432px;
+    margin: 50px auto 0 auto;
+}
+
+#demo img {
+    width: 1080px;
+    height: 432px;
+    max-width: 1080px;
+}
+
+#demo li {
+    float: left;
+    position: relative;
+    width: 80px;
+    height: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.5s;
+    transform-origin: bottom;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+}
+
+#demo li img {
+    transition: 1.2s;
+}
+
+#demo li a {
+    display: block;
+}
+
+#demo li div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #000;
+    line-height: 32px;
+    filter: alpha(opacity=70);
+    opacity: 0.7;
+    text-indent: 2em;
+}
+
+#demo li div a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+#demo li div a:hover {
+    color: #F00;
+    text-decoration: none;
+}
+
+#demo li.active {
+    cursor: pointer;
+    transform: scale(1.02, 1.08);
+    z-index: 3;
+    width: 1055px;
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
+
+#demo li.active img {
+    transform: translate(0px);
+}
+
+#demo li:nth-of-type(1) {
+    transform-origin: bottom left;
+}
+
+#demo li:nth-of-type(4) {
+    transform-origin: bottom right;
+}

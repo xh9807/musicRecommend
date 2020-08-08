@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>热门歌手</title>
+    <link href="asserts1/Style/singer_css.css" type="text/css" rel="stylesheet"/>
+    <script type="text/javascript" src="asserts1/Style/jquery.min.js"></script>
+    <script type="text/javascript" src="asserts1/Style/superbox.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('.superbox').SuperBox();
+        });
+    </script>
+</head>
+
+<body>
+<div id="All">
+    <div class="head">
+        <div class="logo"></div>
+    </div>
+    <div id="navigate">
+        <ul>
+            <li style="font-size:24px; float:left; line-height:35px; text-indent:1em;">
+                <a th:href="@{/home}" target="_self">首页</a>
+            <li style="font-size:24px; float:left; line-height:35px; text-indent:2em;">
+                <a href="#" target="_self">热门歌手</a>
+            <li style="font-size:24px; float:left; line-height:35px; text-indent:2em;">
+                <a href="#" th:href="@{/song/}+'firstPage'">精选歌曲</a>
+            <li style="font-size:24px; float:left; line-height:35px; text-indent:2em;">
+                <a href="#" th:href="@{/collection}">我的收藏</a>
+            <li style="font-size:24px; float:left; line-height:35px; text-indent:2em;">
+                <a href="#" th:href="@{/recommend}">猜你喜欢</a>
+            <li style="font-size:24px; float:left; line-height:35px; text-indent:2em;">
+                <a th:href="@{/logout}" target="_self">退出登录</a>
+        </ul>
+        <hr/>
+    </div>
+    <div class="wrapper">
+        <!-- SuperBox -->
+        <div class="superbox">
+            <div class="superbox-list">
+                <img src="asserts1/Images/1xzq.png" data-img="asserts1/Images/01big.png" alt="" class="superbox-img">
+            </div><!---->
+            <div class="superbox-list">
+                <img src="asserts1/Images/2ljj.png" data-img="asserts1/Images/02big.png" alt="" class="superbox-img">
+            </div><!---->
+            <div class="superbox-list">
+                <img src="asserts1/Images/3zjl.png" data-img="asserts1/Images/03big.png" alt="" class="superbox-img">
+            </div><!---->
+            <div class="superbox-list">
+                <img src="asserts1/Images/4big.png" data-img="asserts1/Images/04big.png" alt="" class="superbox-img">
+            </div><!---->
+            <div class="superbox-list">
+                <img src="asserts1/Images/5lrh.png" data-img="asserts1/Images/05big.png" alt="" class="superbox-img">
+            </div><!---->
+            <div class="superbox-list">
+                <img src="asserts1/Images/6Alan.png" data-img="asserts1/Images/06big.png" alt="" class="superbox-img">
+            </div><!---->
+            <div class="superbox-list">
+                <img src="asserts1/Images/7zj.png" data-img="asserts1/Images/07big.png" alt="" class="superbox-img">
+            </div><!---->
+            <div class="superbox-list">
+                <img src="asserts1/Images/8zxy.png" data-img="asserts1/Images/08big.png" alt="" class="superbox-img">
+            </div><!---->
+            <div class="superbox-list">
+                <img src="asserts1/Images/9cyx.png" data-img="asserts1/Images/09big.png" alt="" class="superbox-img">
+            </div><!---->
+            <div class="superbox-list">
+                <img src="asserts1/Images/10dzq.png" data-img="asserts1/Images/10big.png" alt="" class="superbox-img">
+            </div><!---->
+            <div class="superbox-list">
+                <img src="asserts1/Images/11tf.png" data-img="asserts1/Images/11big.png" alt="" class="superbox-img">
+            </div><!---->
+            <div class="superbox-list">
+                <img src="asserts1/Images/12xs.png" data-img="asserts1/Images/12big.png" alt="" class="superbox-img">
+            </div><!---->
+            <div class="superbox-list">
+                <img src="asserts1/Images/13lyj.png" data-img="asserts1/Images/13big.png" alt="" class="superbox-img">
+            </div><!---->
+            <div class="superbox-list">
+                <img src="asserts1/Images/14bo.png" data-img="asserts1/Images/14big.png" alt="" class="superbox-img">
+            </div><!---->
+            <div class="superbox-list">
+            </div>
+            <!-- /SuperBox -->
+        </div>
+
+        <div>
+</body>
+</html>
